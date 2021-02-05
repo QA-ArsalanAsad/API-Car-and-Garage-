@@ -45,7 +45,7 @@ fetch("http:localhost:9092/car/create",{
 // R - Read BY ID - Fetch GET (CAR READ)
 CAR-CRUD-R
 
-const getGarageByID = ()=> {
+const getCarByID = ()=> {
 
     const params = new URLSearchParams(window.location.search);
     console.log(param);
@@ -65,3 +65,11 @@ const getGarageByID = ()=> {
       .catch((err) => console.error(err));
     
     }
+
+// D - Delete - CAR DELETE
+
+fetch(`http:localhost:9092/car/delete/${id}`,{
+    method:"delete"
+})
+.then((data)=>console.info(`Request was all good with json response ${data}`))
+.catch((err)=> console.error(err));
