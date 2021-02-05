@@ -45,7 +45,7 @@ fetch("http:localhost:9092/car/create",{
 // R - Read BY ID - Fetch GET (CAR READ)
 CAR-CRUD-R
 
-const getGarageByID = ()=> {
+const getCarByID = ()=> {
 
     const params = new URLSearchParams(window.location.search);
     console.log(param);
